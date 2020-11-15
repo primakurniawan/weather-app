@@ -1,0 +1,31 @@
+.forecast__days {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forecast__daily {
+  margin: 1rem;
+}
+
+.forecast__weather {
+  display: block;
+  margin: 2rem;
+}
+
+.forecast__daily__icon--weather {
+  text-transform: capitalize;
+  font-weight: bolder;
+  font-size: 1.15rem;
+}
+
+.forecast__daily__info {
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
+.forecast__daily__date {
+  font-size: 1.25rem;
+  font-style: italic;
+  text-decoration: underline;
+}

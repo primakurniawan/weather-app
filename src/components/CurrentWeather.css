@@ -1,0 +1,22 @@
+.currentWeather__weathers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.currentWeather__weather {
+  display: block;
+  margin: 2rem;
+}
+
+.currentWeather__icon--weather {
+  text-transform: capitalize;
+  font-weight: bolder;
+  font-size: 1.25rem;
+}
+
+.currentWeather__info {
+  font-size: 1.25rem;
+  font-style: italic;
+}

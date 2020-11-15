@@ -1,0 +1,10 @@
+.searchLocation {
+  padding: 1rem;
+}
+
+.searchLocation__input,
+.searchLocation__button {
+  outline: none;
+  font-size: 1.15rem;
+  text-transform: capitalize;
+}
