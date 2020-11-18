@@ -7,6 +7,7 @@ import SearchLocation from "./components/SearchLocation";
 function App() {
   const [currentWeather, setCurrentWeather] = useState({});
   const [forecast, setForecast] = useState({});
+  const [errMsg, setErrMsg] = useState("");
 
   const fetchCurrentWeather = async (location) => {
     const res = await fetch(
@@ -14,6 +15,8 @@ function App() {
     );
     const data = await res.json();
     setCurrentWeather(data);
+    if (data.cod === "404") setErrMsg(data.message);
+    else setErrMsg("");
   };
 
   const fetchForecast = async (location) => {
@@ -37,6 +40,7 @@ function App() {
   return (
     <div className="app">
       <SearchLocation changeLocation={changeLocation} />
+      {errMsg !== "" && <span>{errMsg}</span>}
       <CurrentWeather currentWeather={currentWeather} />
       <Forecast forecast={forecast} />
     </div>
